@@ -15,11 +15,13 @@ import (
 	"strings"
 )
 
-var errVal = flag.String("e", "err", "Hostnames value on error")
-var format = flag.String("f", "%v\n\t%v\n", "Format output (ip, hostnames)")
-var fileName = flag.String("i", "./addresses.txt", "Input file name")
-var sep = flag.String("s", "\n\t", "Hostnames separator")
-var trimDot = flag.Bool("t", true, "Trim hostnames \".\" suffix")
+var (
+	errVal   = flag.String("e", "err", "Hostnames value on error")
+	format   = flag.String("f", "%v\n\t%v\n", "Format output (ip, hostnames)")
+	fileName = flag.String("i", "./addresses.txt", "Input file name")
+	sep      = flag.String("s", "\n\t", "Hostnames separator")
+	trimDot  = flag.Bool("t", true, "Trim hostnames \".\" suffix")
+)
 
 func loadLines(lines *[]string) {
 	file, err := os.Open(*fileName)
