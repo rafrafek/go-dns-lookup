@@ -8,3 +8,8 @@ insert_final_newline = true
 [*.{go,json}]
 indent_style = tab
 indent_size = 4
+
+[.vscode/*.json]
+indent_style = tab
+indent_size = 4
+tab_size = 4
